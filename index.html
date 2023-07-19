@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="particle.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Fjalla+One&family=Otomanopee+One&family=Qahiri&family=Tourney:wght@100&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvesha Jain||Portfolio</title>
+    <style>
+       html,
+      body {
+       
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: rgb(0, 0, 0);
+        border-radius: 10px;
+       background-repeat: no-repeat;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .swiper-button-next:after, .swiper-button-prev:after{
+        color: white;
+      }
+      .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 30px;
+   
+    top: 1800px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 30px;
+  
+    top: 1800px;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    z-index: 1;
+    top: 2150px;
+    width: 100%;
+    color: white;
+    background-color: white;}
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+    color: #b61dff;
+}
+.swiper-pagination-bullet {
+    background-color: #b61dff;
+}
+      </style>
+</head>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<body>
+   <div class="god">
+   
+  <div class="navsubstitute">
+    <h1 style="margin: 0;">Portfolio</h1>
+    <label class="switch"  id="switchbox" >
+      <input id="switchbtn" type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
+    <div id="navbar">
+       <h1>Portfolio</h1>
+       <div class="tabs">
+        <input type="radio" name="tab" id="About" checked="checked">
+        <label for="About"><p id="aboutp">About</p></label>
+
+        <input type="radio" name="tab" id="Skills" >
+        <label for="Skills"><p  id="Acheivementsp">skills</p></label>
+
+        <input type="radio" name="tab" id="Projects" >
+        <label for="Projects"><p id="projectsp">Projects</p></label>
+        
+        
+        
+        <input type="radio" name="tab" id="Contact" >
+        <label for="Contact"><p id="contactmep">Contact Me</p></label>
+        <div class="dash">
+
+        </div>
+        
+        </div>  
+        </div>
+        <!-- <svg id="svgwave1" height="100%" width="100%" id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 C 0,700 0,175 0,175 C 93.84615384615384,133.7923076923077 187.69230769230768,92.58461538461538 263,112 C 338.3076923076923,131.41538461538462 395.0769230769231,211.45384615384614 468,228 C 540.9230769230769,244.54615384615386 629.9999999999999,197.60000000000002 724,166 C 818.0000000000001,134.39999999999998 916.9230769230769,118.14615384615382 995,122 C 1073.076923076923,125.85384615384618 1130.3076923076922,149.81538461538463 1201,162 C 1271.6923076923078,174.18461538461537 1355.8461538461538,174.59230769230768 1440,175 C 1440,175 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#ffffff66" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 350)"></path><path d="M 0,700 C 0,700 0,350 0,350 C 90.0974358974359,376.1923076923077 180.1948717948718,402.38461538461536 268,393 C 355.8051282051282,383.61538461538464 441.31794871794875,338.6538461538462 504,327 C 566.6820512820512,315.3461538461538 606.5333333333333,337 684,358 C 761.4666666666667,379 876.5487179487179,399.34615384615387 962,397 C 1047.451282051282,394.65384615384613 1103.271794871795,369.6153846153846 1178,358 C 1252.728205128205,346.3846153846154 1346.3641025641025,348.19230769230774 1440,350 C 1440,350 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#ffffff88" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 350)"></path><path d="M 0,700 C 0,700 0,525 0,525 C 103.70000000000002,550.5461538461539 207.40000000000003,576.0923076923076 283,563 C 358.59999999999997,549.9076923076924 406.0999999999999,498.1769230769232 477,478 C 547.9000000000001,457.8230769230768 642.2,469.19999999999993 728,478 C 813.8,486.80000000000007 891.0999999999999,493.0230769230769 957,514 C 1022.9000000000001,534.9769230769231 1077.4,570.7076923076924 1156,575 C 1234.6,579.2923076923076 1337.3,552.1461538461538 1440,525 C 1440,525 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#ffffffff" class="transition-all duration-300 ease-in-out delay-150" transform="rotate(-180 720 350)"></path></svg> -->
+        <div class="content">
+      
+        <!-- about section started -->
+        <div class="aboutsection">
+            <div class="aboutheading"><h1>ABOUT ME</h1></div>
+        <div id="AboutBox" >
+            <div  class="imagesection">
+                <div  class="imgbox">
+                    <img src="./pics/profile.jpg" id="profile" alt="profile">
+                </div>
+
+            <div class="iconwrapper">
+                <div class="imgwrap"><a  target="_blank" href="https://github.com/anveshajain19">
+                    <div class="githubico logosm">
+                        <img src="./pics/github.png" class="icon" alt="github">
+                    </div>
+                    <p class="iconname l">github</p>
+                    </a></div>
+                <div class="imgwrap"><a target="_blank"  href="https://www.instagram.com/iamanveshajain/">
+                    <div class="instaico logosm">
+                        <img src="./pics/insta.png" class="icon" alt="insta">
+                    </div>
+                    <p class="iconname">instagram</p>
+                     </a></div>
+                <div class="imgwrap"><a  target="_blank" href="https://www.linkedin.com/in/anvesha-jain-25413321b/">
+                    <div class="LinkedInico logosm">
+                        <img src="./pics/linkedin.png" class="icon" alt="linkedin">
+                    </div>
+                    <p class="iconname l">linkedin</p>
+                     </a>  </div>
+            </div>
+        </div>
+        <div  class="aboutcontent typewriter">
+            <h1>Anvesha Jain</h1>
+            <br>
+            <h3>Tech enthusiast</h3>
+            <p style="font-family: 'Otomanopee One';">I am Anvesha Jain. I am currently in my pre final year, persuing B.Tech in CSE from SGSITS Indore. I am learning python and implement new concept and skills.I am skilled in HTML ,CSS ,JS and also familiar with some JS libraries which makes a website look good and feel smooth. </p>
+        </div>
+            </div>
+          </div>
+            <!-- about section ended -->
+
+          <!-- skills section started -->
+
+          <div class="aboutsection skillsection">
+            <div class="aboutheading"><h1>Skills</h1></div>
+            <div class="skillbox">
+              <div class="skill">
+                <h1>Python</h1><div class="outerbar"><div class="innerbar"></div></div>
+              </div>
+              <div class="skill">
+                <h1>HTML</h1><div class="outerbar"><div class="innerbar"></div></div>
+              </div>
+              <div class="skill">
+                <h1>CSS</h1><div class="outerbar"><div class="innerbar"></div></div>
+              </div>
+              <div class="skill">
+                <h1>JavaScript</h1><div class="outerbar"><div class="innerbar"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skills section ended -->
+
+
+            <!-- projects section started -->
+            <div class="aboutsection projectsection">
+                <div class="aboutheading"><h1>Projects</h1></div>
+                <div class="projects">
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"  >
+                            <img class="projectimg " id="tttimg" src="./tictactoe.PNG" alt="">
+                            <a style="top:-40px;" target="_blank" class="NeonBtn plink"  href="https://rishigupta1109.github.io/tictaktoe">Visit Site   <span></span><span></span><span></span><span></span></a>
+                          </div>
+                          <div class="swiper-slide"  >
+                            <img class="projectimg " id="bgimg" src="./Boxgame.PNG" alt="">
+                            <h2 class="projecthead" style="color:white;position:relative;top:-30px;">Dots & Boxes</h2>
+                            <a style="top:-40px;" target="_blank" class="NeonBtn plink" href="https://rishigupta1109.github.io/Dots-Boxes">Visit Site<span></span><span></span><span></span><span></span></a>
+                          </div>
+                          <div class="swiper-slide"  ><img class="projectimg" id="ctimg" src="./coronatracker.PNG" alt="">
+                              <a style="top:50px;" target="_blank" class="NeonBtn plink" href="https://rishigupta1109.github.io/CoronaTracker">Visit Site<span></span><span></span><span></span><span></span></a>
+                            <h2 class="projecthead" style="color:white;position:relative;top:-70px;">Corona Tracker</h2></div>
+                          <div class="swiper-slide"  ><img class="projectimg" id="ctimg" src="./algovisualiser.PNG" alt="">
+                              <a style="top:50px;" target="_blank" class="NeonBtn plink" href="https://rishigupta1109.github.io/algorithm_visualiser/">Visit Site<span></span><span></span><span></span><span></span></a>
+                            <h2 class="projecthead" style="color:white;position:relative;top:-70px;">Algorithm Visualiser</h2></div>
+                          <div class="swiper-slide"  ><img class="projectimg" id="fsimg" src="./foodstore.PNG" alt="">
+                              <a style="top:50px;" target="_blank" class="NeonBtn plink" href="https://www.linkedin.com/posts/rishi-gupta-027298204_webdevelopment-learning-reactjs-activity-6814595111528353792-OW1H">Watch Overview<span></span><span></span><span></span><span></span></a>
+                              <h2 class="projecthead" style="color:white;position:relative;top:-70px;">FoodBaZinga</h2></div>
+                          <div class="swiper-slide"  ><img class="projectimg" id="fsimg" src="./extension.PNG" alt="">
+                              <a style="top:50px;" target="_blank" class="NeonBtn plink" href="https://www.linkedin.com/posts/rishi-gupta-027298204_connections-chromeextension-competitiveprogramming-activity-6852170088955674624-XKie">Watch Overview<span></span><span></span><span></span><span></span></a>
+                              <h2 class="projecthead" style="color:white;position:relative;top:-70px;">Contest Buddy</h2></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      </div>
+                      
+                </div>
+                   
+                
+           
+            <!-- projects section ended -->
+
+                <!-- contact me section started -->
+
+                <div class="aboutsection contactmesection">
+                  <div class="aboutheading"><h1>Contact Me</h1></div>
+                  <div class="contactbox">
+                    <form>
+                      <div class="inputbox">
+                        <input type="text" name="Name" id="Name">
+                        <p class="inputhead">Name</p>
+                      </div>
+                      <div class="inputbox">
+                        <input type="email" name="Email" id="Email">
+                        <p class="inputhead">Email </p>
+                      </div>
+                      <div class="inputbox">
+                        <textarea  name="message" id="Message"></textarea>
+                        <p class="inputhead">Message </p>
+                      </div>
+                      <!-- <button id="submit">Submit</button> -->
+                      <div class="NeonBtn" id="submit" >
+                        
+                        Submit
+                        <span></span><span></span><span></span><span></span>
+                      </div>
+                    </form>
+                  </div>
+                  <div style="color: #b61dff; margin: 25px; font-size: 25px; margin-bottom: 0;">Made with 💖 by Anvesha Jain</div>
+                </div>
+
+                <!-- contact me section ended -->
+
+
+            
+
+           
+  
+      </div>
+    </div> 
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+          </div>
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> 
+
+</body>
+
+<script src="./tilt.js"></script> 
+<script src="./index.js"></script> 
+<!-- <script src="particle.js"></script> -->
+</html>
