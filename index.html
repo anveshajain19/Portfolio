@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> 
+    
+</head>
+<body> 
+<div id="header"> 
+    <div class="container"> 
+        <nav> 
+            <p>Anvesha Portfolio</p>
+            <ul id="sidemenu"> 
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li> 
+                <li><a href="#services">Blogs</a></li> 
+                <li><a href="#portfolio">Projects</a></li> 
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul> 
+             
+        </nav> 
+        <div class="header-text"> 
+            <p>Software Engineer</p>
+            <h1>Hi, I'm <span>Anvesha</span><br>Jain from India.</h1>
+        </div>
+    </div>
+</div>
+<div id="about"> 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1> 
+                <p>
+                    I'm a technology enthusiast and I wish to use my technical acumen to contribute
+                    to a place that creates a positive impact on society! 
+                    I am currently in my 3rd year, pursuing B.tech in Computer Science and
+                    Engineering from SGSITS Indore. 
+                    I always embrace differences and be open to alternate ideas and opinions. 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>COMPETITIVE PROGRAMMING</span><br> Using Python.</li>
+                        <li><span>WEB DEVELOPMENT</span><br>Developing user friendly websites using HTML, CSS, JS.</li>
+                        <li><span>CS FUNDAMENTALS </span><br> Data Structures, OOPs, OS, DBMS, SQL, Agile.</li>
+                        <li><span>ONGOING </span><br>Currently learning C++. </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>SDE01 INTERN | May 2023 - July 2023 </span><br>SDE 01 Intern at NoQS Digital.</li>
+                        <li><span>GDSC LEAD | September 2022 - July 2023</span><br>I was the Lead for the GDSC of our college, where we organized online sessions 
+                            and contests for the development of our college and for creating that cp environment at college.</li>
+                        <li><span>GOOGLE WE SCHOLAR | April 2022 - present</span><br>I was selected amongst the top 250 scholars all over the India for this program.</li>
+                        <li><span>IET INDIA  | Aug 2022 </span><br>Selected amongst thw top 30 scholas for the regional presentation round.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Current | B.Tech </span><br>B.Tech at Shri Govindram Seksaria Institute Of Technology and Science, Indore.</li>
+                        <li><span>2018 - 2020 | XII</span><br>Luv Kush Vidhya Vihaar Hr. Sec. School.</li>
+                        <li><span>2017 - 2018 | X </span><br>Agrawal Public School, Indore.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Blogs</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Object Oriented Programming</h2>
+                <p>Discover the power and elegance of Object-Oriented Programming (OOPS) in this insightful blog exploring its key concepts and best practices.</p>
+                <a href="https://medium.com/@aman.bagadiya9/embracing-object-oriented-programming-a-journey-into-efficient-and-elegant-code-4bd6242fcd16">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Dynamic Programming</h2>
+                <p>An Insightful Journey into Optimal Solutions</p>
+                <a href="https://medium.com/@aman.bagadiya9/dynamic-programming-60830694f831">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Graphs, DSA</h2>
+                <p>Graphs: Unveiling the Diverse Approaches</p>
+                <a href="https://medium.com/@aman.bagadiya9/graphs-unveiling-the-diverse-approaches-ca1275f33aad">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Clip Master </h3>
+                    <p>An Image Editor website using HTML, CSS, JS.</p>
+                    <a href="https://github.com/AMAN-BAGADIYA/Clip-Master"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Digital Clock</h3>
+                    <p>Display the current time with precision using HTML, CSS, and JS in my digital clock project.</p>
+                    <a href="https://github.com/anveshajain19/Digital-Clock"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Weather App</h3>
+                    <p>Displays weather of the place which you want to see.</p>
+                    <a href="https://github.com/anveshajain19/Weather-App"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> anvesha19jain@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +91-7024340305</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100071999268511"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/iamanveshajain/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/anvesha19jain"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://github.com/anveshajain19"><i class="fa fa-github-square" ></i></a>
+                    <a href="https://www.linkedin.com/in/anvesha-jain-25413321b/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1pB4U9U4EIg6HRaAio5sFQ643DySAZ8vT/view?usp=sharing" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made wtih <i class="fas fa-heart"></i> by Anvesha Jain.</p>
+    </div>
+</div>
+<script>
+    window.addEventListener('load', function() {
+      var welcomeSound = document.getElementById('welcomeSound');
+      welcomeSound.play();
+    });
+</script><script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    
+    var tabcontents = document.getElementsByClassName("tab-contents");       
+
+    function opentab(tabname) {
+        
+        for (tablink of tablinks) {
+            
+            tablink.classList.remove("active-link");
+        }
+        
+        for (tabcontent of tabcontents) {
+           
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script><script>
+   
+    var sidemeu = document.getElementById("sidemenu");
+   
+    function openmenu(){
+        
+        sidemeu.style.right = "0";
+    }
+    
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYBoH7nW8-jgVOB3L8i-d_guViluHF2AKSifN6J4qqSde1RLDgtqU_OjGj67OEASro/exec' 
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
