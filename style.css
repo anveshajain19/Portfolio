@@ -1,70 +1,170 @@
 * { 
     margin: 0; /* Remove all margins from all elements */
     padding: 0; /* Remove all paddings from all elements */
-    font-family: 'Poppins', sans-serif; /* Set the font family to 'Poppins' or fallback to a sans-serif font if 'Poppins' is not available */
+    font-family: 'Glacial Indifference', sans-serif;
     box-sizing: border-box; /* Use the border-box box-sizing model for all elements. This includes padding and border within the element's total width and height. */
 }
 html {
     scroll-behavior: smooth; /* Enable smooth scrolling behavior for the entire HTML document */
+    width: 100%;
 }
 /* This property can be used to enhance the user experience when navigating within the page.*/
 body{ /*CSS selector that targets the <body> element in an HTML document. */
     background: #000000; /* Set Background colour to black*/
     color: #fff; /* Set text colour to white*/
+    font-family: 'Glacial Indifference', sans-serif;
 }
 #header { /* id ko # se access krte hain*/
     width: 100%; /* Set the width of the header to 100% of its parent's width */
     height: 100vh; /* Set the height of the header to 100% of the viewport's height. The header will occupy the full vertical height of the user's screen, regardless of the device or screen size. */
-    background-image: url(images/background.png); /* Set the background image of the header. The URL points to the image file "background.png" in the "images" folder relative to the CSS file. */
+    background-image: url(images/ani.mp4) ; /* Set the background image of the header. The URL points to the image file "background.png" in the "images" folder relative to the CSS file. */
     background-size: cover; /* Scale the background image to cover the entire header. The image will be resized to fill the header while maintaining its aspect ratio, even if it means cropping parts of the image. */
     background-position: center; /* Position the background image at the center of the header both horizontally and vertically. */
      /* Keep the background image fixed in place even when the user scrolls down the page. This creates a parallax effect, where the content of the header scrolls over the fixed background image, giving a sense of depth and interactivity. */
 }
-.container{ /*class attribute hai ye, "." se access krte*/
-    padding: 10px 10%; /*10 px space from top and bottom and 10% from left side and right side*/
+#header {
+    position: relative;
+    overflow: hidden; /* Ensure the video doesn't overflow the header */
 }
+
+#header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire header */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Add additional styles as needed for your header content */
+
+.container{ /*class attribute hai ye, "." se access krte*/
+    padding: 0px 3%; /*10 px space from top and bottom and 10% from left side and right side*/
+}
+
+/* Rest of your styles... */
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Set a negative z-index to position the video behind other content */
+}
+
 nav{ /*ye toh simply nav tab ko access kar rhe hain*/
+    width: 100%;
+    background-color: rgba(31, 30, 30, 0.3);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    position: fixed;
+    z-index: 1000;
+    font-family: 'Glacial Indifference', sans-serif;
     /*TO UNDERSTAND FLEX WATCH THIS https://youtu.be/phWxA89Dy94*/
     display: flex; /*so that the image and links will be side by side*/
     /*flex-direction is set by default to row*/
-    align-items: right; /*right aligning the items*/
+    align-items: center; /*right aligning the items*/
     justify-content: space-between; /*flex-end likhenge toh end mein chale jayenge, centre se centre and space between se evenly pure m distribbute ho jayenge, space around and space evenly bhi hota h*/
 }
+nav p {
+    padding-left: 35px; /* Remove left padding */
+}
+
+nav p h3 {
+    /* Add styles for the h3 heading */
+    font-size: 3em; /* Adjust the font size as needed */
+    color: #333; /* Change the color as needed */
+    /* Add any other styles you want for the h3 heading */
+}
+
+/* Add this style to ensure the nav is not restricted by any parent container */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
 .logo{ /*Here we are accessing our class with . */
     width: 140px; /*setting it's width to 140px*/
 }
+h3{
+    padding-left: 0px;
+    font-family: 'Glacial Indifference', sans-serif;
+}
 /* Styling the list items (li) inside the navigation (nav) */
+nav ul {
+    margin-right: 20px;
+    font-family: 'Glacial Indifference', sans-serif;
+
+}
 nav ul li {
+    font-family: 'Glacial Indifference', sans-serif;
     display: inline-block; /* Display the list items in a row (horizontally aligned) */
     list-style: none; /* Remove the default list-style (bullet points) from the list items */
     margin: 10px 20px; /* Add a margin of 10px at the top and bottom and 20px at the left and right of each list item */
 }
+nav p {
+    margin-left: 0px;
+}
 /* Styling the links (a) inside the list items (li) within the navigation (nav) */
 nav ul li a {
+    font-family: 'Glacial Indifference', sans-serif;
     color: #fff; /* Set the text color of the links to white */
     text-decoration: none; /* Remove the underline from the links */
     font-size: 18px; /* Set the font size of the links to 18 pixels */
     /*position: relative;  Set the positioning context for the links */
     /*TO UNDERSTAND RELATIVE/ABSOLUTE POSITION: https://youtube.com/shorts/jyi8s_AyxKA?feature=share*/
 }
+/* Add this style to create the dot below the nav items when hovered */
+nav ul li a {
+    position: relative;
+    text-decoration: none; /* Remove the underline from the links */
+    color: #fff; /* Set the text color of the links to white */
+}
+
+nav ul li a::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -15px; /* Adjust this value to center the dot */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%; /* Make the dot circular */
+    opacity: 0; /* Initially hide the dot */
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    opacity: 1; /* Show the dot on hover */
+}
+
 /* Styles for the elements with the class 'header-text' */
 .header-text {
-    margin-top: 20%; /* Adds a top margin of 20% of the parent element's height to the text */
+    font-family: 'Glacial Indifference', sans-serif;
+    margin-top: 0%; /* Adds a top margin of 20% of the parent element's height to the text */
     font-size: 30px; /* Sets the font size of the text to 30 pixels */
 }
 /* Styles for the 'h1' element inside elements with the class 'header-text' */
 .header-text h1 {
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 60px; /* Sets the font size of the 'h1' text to 60 pixels */
-    margin-top: 20px; /* Adds a top margin of 20 pixels to the 'h1' element */
+    margin-top: 0px; /* Adds a top margin of 20 pixels to the 'h1' element */
 }
 
 /* Styles for the 'span' element inside 'h1' elements within elements with the class 'header-text' */
 .header-text h1 span {
-    color: hsl(111, 100%, 50%); /* Sets the text color of the 'span' element to a shade of purple (#580fa7) */
+    color: hsl(0, 0%, 100%); /* Sets the text color of the 'span' element to a shade of purple (#580fa7) */
 }
 
 /* -----------about--------------- */
 #about{
+    font-family: 'Glacial Indifference', sans-serif;
     padding: 80px 0; /*80px from top and bottom, 0 from left and right*/
     color: #ababab; /*Text ka colour set kar diya*/
 }
@@ -81,23 +181,31 @@ nav ul li a {
     width: 100%; /* Set the image width to 100% of its container */
     border-radius: 15px; /* Add a rounded border to the image!!SAMZO */
 }
-
+.about p a{
+    text-decoration: none;
+}
 /* Styles for elements with class 'about-col-2' */
 .about-col-2 {
     flex-basis: 60%; /* Set the flex-basis to 60% to control the width of flex items within their flex container */
+    text-decoration: none;
 }
-
 /* Styles for elements with class 'sub-title' */
 .sub-title {
+    padding-bottom: 30px;
+    font-family: 'Glacial Indifference', sans-serif;
     font-size: 60px; /* Set the font size to 60 pixels for sub-titles */
     font-weight: 600; /* Set the font weight to 600 (bold) for sub-titles */
     color: #fff; /* Set the text color to white for sub-titles */
+}
+a {
+    text-decoration: none;
 }
 
 /* Styles for elements with class 'tab-titles' */
 .tab-titles {
     display: flex; /* Create a flex container to display tab titles in a row */
     margin: 20px 0 40px; /* Set top and bottom margin of 20px and 40px respectively, and no left or right margin */
+    font-size: 100px;
 }
 
 /* Styles for elements with class 'tab-links' */
@@ -114,7 +222,7 @@ nav ul li a {
     content: ''; /* Adding content to the pseudo-element (in this case, a horizontal line) */
     width: 0; /* Set the initial width of the pseudo-element to 0 (it will be animated to reveal) */
     height: 3px; /* Set the height of the pseudo-element (the horizontal line) to 3 pixels */
-    background: hsl(111, 100%, 50%); /* Set the background color of the pseudo-element (the horizontal line) to #580fa7 */
+    background: hsl(0, 0%, 100%); /* Set the background color of the pseudo-element (the horizontal line) to #580fa7 */
     position: absolute; /* Position the pseudo-element absolutely within the tab link */
     left: 0; /* Position the left edge of the pseudo-element at the left edge of the tab link */
     bottom: -8px; /* Position the bottom edge of the pseudo-element 8 pixels above the bottom of the tab link */
@@ -131,7 +239,7 @@ nav ul li a {
 }
 /* Styles for 'span' elements inside list items within elements with class 'tab-contents' */
 .tab-contents ul li span {
-    color: hsl(111, 100%, 50%); /* Set the text color of 'span' elements inside tab contents to #580fa7 */
+    color: hsl(0, 0%, 100%); /* Set the text color of 'span' elements inside tab contents to #580fa7 */
     font-size: 14px; /* Set the font size to 14 pixels for 'span' elements inside tab contents */
 }
 /* Styles for elements with class 'tab-contents' */
@@ -141,6 +249,11 @@ nav ul li a {
 /* Styles for elements with class 'active-tab' inside elements with class 'tab-contents' */
 .tab-contents.active-tab {
     display: block; /* Display the tab content block when it has the class 'active-tab' (e.g., when it is active) */
+   
+}
+.tab-contents.active-tab ul li{
+    padding-bottom: 5px;
+    
 }
 /* ----------------services------------- */
 /* Styling for the element with the ID 'services' */
@@ -216,7 +329,7 @@ nav ul li a {
 .layer {
     width: 100%; /* Sets the width to 100% of its parent container */
     height: 0; /* Sets the initial height to 0 */
-    background: linear-gradient(rgba(0,0,0,0.6), hsl(212, 100%, 50%)); /* Adds a linear gradient background from semi-transparent black to a shade of purple (#580fa7) */
+    background: linear-gradient(rgba(0,0,0,0.6), hsl(0, 0%, 100%)); /* Adds a linear gradient background from semi-transparent black to a shade of purple (#580fa7) */
     border-radius: 10px; /* Adds a border-radius of 10 pixels to create rounded corners */
     position: absolute; /* Positions the element absolutely */
     left: 0; /* Aligns the element to the left of its container */

@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website </title> 
     <link rel="stylesheet" href="style.css">
+    
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> 
     
 </head>
 <body> 
+    <nav> 
+        <p> <b> जय जिनेन्द्र | Namaste | Hello </b> </p>
+        <ul id="sidemenu"> 
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li> 
+            <li><a href="#Acheivements">Acheivements</a></li> 
+            <li><a href="#services">Blogs</a></li> 
+            <li><a href="#portfolio">Projects</a></li> 
+            <li><a href="#contact">Contact</a></li>
+
+        </ul> 
+    </nav> 
 <div id="header"> 
+    <video id="bgVideo" muted loop playsinline>
+        <source src="images/ani.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="container"> 
-        <nav> 
-            <p>Anvesha Portfolio</p>
-            <ul id="sidemenu"> 
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li> 
-                <li><a href="#services">Blogs</a></li> 
-                <li><a href="#portfolio">Projects</a></li> 
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul> 
-             
-        </nav> 
-        <div class="header-text"> 
-            <p>Software Engineer</p>
-            <h1>Hi, I'm <span>Anvesha</span><br>Jain from India.</h1>
-        </div>
+        
+        
     </div>
 </div>
 <div id="about"> 
@@ -39,11 +42,11 @@
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1> 
                 <p>
+                    <b> <h3>I always embrace differences and be open to alternate ideas and opinions.</h3></b> </br>
                     I'm a technology enthusiast and I wish to use my technical acumen to contribute
-                    to a place that creates a positive impact on society! 
-                    I am currently in my 3rd year, pursuing B.tech in Computer Science and
-                    Engineering from SGSITS Indore. 
-                    I always embrace differences and be open to alternate ideas and opinions. 
+                    to a place that creates a positive impact on society! </br>
+                    I am currently in my 3<sup>rd</sup> year - 6<sup>th</sup> semester, pursuing <b>B.tech</b> in <b>Computer Science and
+                        Engineering</b> from <a href="https://www.sgsits.ac.in/" target="_blank">SGSITS Indore</a>.
                 </p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -52,19 +55,20 @@
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>COMPETITIVE PROGRAMMING</span><br> Using Python.</li>
+                        <li><span>COMPETITIVE PROGRAMMING ( In Python )</span><br> 3 &star; on Leetcode, 1 &star; on <a href = 'https://codeforces.com/profile/anvi1e91e10'>CodeForces</a>, 1 &star; on <a href = 'https://www.codechef.com/users/fearless_19'>CodeChef</a>.</li>
                         <li><span>WEB DEVELOPMENT</span><br>Developing user friendly websites using HTML, CSS, JS.</li>
-                        <li><span>CS FUNDAMENTALS </span><br> Data Structures, OOPs, OS, DBMS, SQL, Agile.</li>
-                        <li><span>ONGOING </span><br>Currently learning C++. </li>
+                        <li><span>CS FUNDAMENTALS </span><br> Data Structures and Algorithms, Object Oriented Programming, Operating Systems, Computer Networks, Database Management Systems, SQL, Agile, Artificial Intelligence.</li>
+                        <li><span>ONGOING COURSES</span><br> Data Analytics in Python, Design and Analysis of algorithms, Machine Learning, Internet Of Things. </li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul>
+                        
+                        <li><span>CLUMOSS | 7th August 2023 - 20 September 2023</span><br> Selected as Power BI Intern at Clumoss.</li>
                         <li><span>SDE01 INTERN | May 2023 - July 2023 </span><br>SDE 01 Intern at NoQS Digital.</li>
-                        <li><span>GDSC LEAD | September 2022 - July 2023</span><br>I was the Lead for the GDSC of our college, where we organized online sessions 
-                            and contests for the development of our college and for creating that cp environment at college.</li>
-                        <li><span>GOOGLE WE SCHOLAR | April 2022 - present</span><br>I was selected amongst the top 250 scholars all over the India for this program.</li>
-                        <li><span>IET INDIA  | Aug 2022 </span><br>Selected amongst thw top 30 scholas for the regional presentation round.</li>
+                        <li><span>GOLDMAN SACHS | March 2023</span><br>I was the finalist from my college to attend the women's possibility summit and got a chnace to personally talk to working professionals there.</li>
+                        <li><span>RYSECAMP  | December 2022 - June 2023 </span><br> Worked as a community Lead for them and try to build innovaative solutions for there app.</li>
+                        <li><span>GS PRODUCTION HOUSE | Dec 2021 - May 2023 </span><br>Worked as a Graphic Designer and Content creator @ GSPH.</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -78,6 +82,23 @@
         </div>
     </div>
 </div>
+
+<div id="Acheivements"> 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">Acheivements</h1> 
+                <p>Google WE Scholar 
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div id="services">
     <div class="container">
@@ -220,6 +241,13 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var bgVideo = document.getElementById("bgVideo");
+        // Play the video every time the page is reloaded
+        bgVideo.play();
+    });
 </script>
 </body>
 </html>
